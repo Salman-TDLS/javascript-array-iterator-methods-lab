@@ -254,6 +254,11 @@ let firstLast = []
 
 // Complete the exercise in the space below:
 
+firstLast = people.map((person) => {
+  let names = person.split(', ')
+  return names[1] + ' ' + names[0]
+})
+
 // Check your work:
 console.log('Exercise 5 my result: ', firstLast)
 console.log('Exercise 5 correct result: ', [
@@ -299,6 +304,8 @@ console.log('Exercise 5 correct result: ', [
   'William Blake',
 ])
 
+//_________________________________________________________________
+
 //Exercise 6: Array.prototype.some()
 /*
 Determine if there is at least one person in the devs array who is 18 years 
@@ -313,6 +320,11 @@ old or older.
 let isAdultPresent = null
 
 // Complete the exercise in the space below:
+
+isAdultPresent = devs.some((person) => {
+  const age = 2026 - person.year
+  return age >= 18
+})
 
 // Check your work:
 console.log('Exercise 6 my result: ', isAdultPresent)
@@ -336,6 +348,11 @@ let isEveryone19OrOlder = null
 
 // Complete the exercise in the space below:
 
+isEveryone19OrOlder = devs.every((person) => {
+  const age = 2026 - person.year
+  return age >= 19
+})
+
 // Check your work:
 console.log('Exercise 7 my result: ', isEveryone19OrOlder)
 console.log('Exercise 7 correct result: ', false)
@@ -354,6 +371,13 @@ let commentById = {}
 
 // Complete the exercise in the space below:
 
+commentById = comments.find((comment) => {
+  if (comment.id === 823423) {
+    return true
+  }
+  return false
+})
+
 // Check your work:
 console.log('Exercise 8 my result: ', commentById)
 console.log('Exercise 8 correct result: ', { text: 'Super good', id: 823423 })
@@ -371,6 +395,13 @@ of comment objects.
 let idx = null
 
 // Complete the exercise in the space below:
+
+idx = comments.findIndex((comment) => {
+  if (comment.id === 123523) {
+    return true
+  }
+  return false
+})
 
 // Check your work:
 console.log('Exercise 9 my result: ', idx)

@@ -177,6 +177,16 @@ let sortedByBirthYear = []
 
 // Complete the exercise in the space below:
 
+sortedByBirthYear = inventors.sort((a, b) => {
+  if (a.year < b.year) {
+    return -1
+  }
+  if (a.year > b.year) {
+    return 1
+  }
+  return 0
+})
+
 // Check your work:
 console.log('Exercise 3 my result: ', sortedByBirthYear)
 console.log('Exercise 3 correct result: ', [
@@ -211,6 +221,12 @@ from an array of inventor objects
 let inventorNamedAda = {}
 
 // Complete the exercise in the space below:
+
+inventorNamedAda = inventors.find((inventor) => {
+  if (inventor.first === 'Ada') {
+    return true
+  }
+})
 
 // Check your work:
 console.log('Exercise 4 my result: ', inventorNamedAda)
